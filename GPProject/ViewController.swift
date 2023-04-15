@@ -11,8 +11,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // My second commit
-        // git stash message
+        // My first commit 
     }
 
 
