@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        animateText("Text Data")
     }
     
     func animateText(_ text: String) {
