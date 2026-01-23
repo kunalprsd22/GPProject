@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         obj.name = "Kunal"
         obj.email = "qTq4t@example.com"
-        //animateText("hello")
+        animateText("hello")
     }
     
     func animateText(_ text: String) {
