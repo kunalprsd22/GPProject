@@ -15,9 +15,13 @@ class ViewController: UIViewController {
     private var currentIndex = 0
     private var timer: Timer?
     
+    var obj = UserModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        animateText("hello")
+        obj.name = "Kunal"
+        obj.email = "qTq4t@example.com"
+        //animateText("hello")
     }
     
     func animateText(_ text: String) {
@@ -48,5 +52,14 @@ class ViewController: UIViewController {
         myName.text?.append(textToAnimate[index])
         currentIndex += 1
     }
-}
+    
+    @IBAction func pushClick(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC = storyboard.instantiateViewController(
+            withIdentifier: "SecondVC"
+        ) as! SecondVC
+        nextVC.obj = obj
+        navigationController?.pushViewController(nextVC, animated: true)
 
+    }
+}
